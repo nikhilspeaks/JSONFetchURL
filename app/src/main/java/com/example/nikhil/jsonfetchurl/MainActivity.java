@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         protected String doInBackground(String... strings) {
-            try {
+            try
+            {
                 URL url = new URL("https://api.myjson.com/bins/ol5wa");
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
@@ -57,8 +58,9 @@ public class MainActivity extends AppCompatActivity
                 //we need to paarse the data so needs json arrray and json object to store them
                 Log.e("msg:msg:",""+msg);
                 
-                 JSONArray jsonArray = new JSONArray(msg);
-                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONArray jsonArray = new JSONArray(msg);
+                    for (int i = 0; i < jsonArray.length(); i++)
+                    {
                     PojoClass pojoClass = new PojoClass();
                     JSONObject jsonObject = (JSONObject) jsonArray.get(i);
 
